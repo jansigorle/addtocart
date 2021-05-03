@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <link rel="stylesheet" href="addtocart.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>cart</title>
+  </head>
+  <body class="bg-light" >
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+                
+        <a class="navbar-brand " href=""><img src="/logo.PNG" width="250px" height="80px" alt=""></a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    
+       <ul class="navbar-nav ml-auto" style="font-size: 20px;" >
+        <li class="nav-item ">
+            <a class="nav-link" href="/index.html"><strong>Home</strong></a>  
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/price.html"><strong>packages</strong></a>  
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/blog.html"><strong>blog</strong></a>  
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/aboutus.html"><strong>about us</strong></a>  
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/contactus.html"><strong>contact us</strong></a>  
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/signup.html"><strong>signup</strong></a>  
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/login.html"><strong>login</strong></a>  
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/addtocart.html"><strong>cart</strong></a>  
+        </li>
+        </ul>
+      </div>
+    </nav>
+</header>
+      <div class="container">
+          <div class="py-5 text-center">
+            <img class ="mb-4 d-block mx-auto" src="https://icons.iconarchive.com/icons/iconsmind/outline/512/Checkout-icon.png" alt="Checkout Cart" width="90" height="90">
+            <h2 class="heading"> CHECKOUT </h2>
+          </div>
+      </div>
+      <br>
+      <form action="" class="needs-validation" novalidate>
+      <div class="container">
+        <div class="row">
+          <div class="col-8">
+            <div class="container">
+                  <h3 class="mb-4">Billing Information</h3>
+                      <div class="row g-3">
+                          <div class="col-md-6">
+                              <label for="firstname" class="form-label">First Name</label>
+                              <input id="firstname" type="text" class="form-control" placeholder="John" required>
+                              <div class="invalid-feedback">Firstname Invalid!</div>
+                          </div>
+                          <div class="col-md-6">
+                              <label for="lastname" class="form-label">Last Name</label>
+                              <input id="lastname" type="text" class="form-control" placeholder="Doe" required>
+                              <div class="invalid-feedback">Lastname Invalid!</div>
+                          </div>
+                          <div class="col-md-8">
+                              <label for="address1" class="form-label">Address</label>
+                              <input id="address1" type="text" class="form-control" placeholder="123 Street" required>
+                              <div class="invalid-feedback">Address Invalid!</div>
+                          </div>
+                          <div class="col-md-4">
+                            <label for="address2" class="form-label">Address 2</label>
+                            <small class="text-muted">(Optional)</small>
+                            <input id="address2" type="text" class="form-control" placeholder="Apt/Suite">
+                        </div>
+                        <div class="col-md-4">
+                          <label for="city" class="form-label">City</label>
+                          <input id="city" type="text" class="form-control" placeholder="Happy Town" required>
+                          <div class="invalid-feedback">City Invalid!</div>
+                        </div>
+                        <div class="col-md-4">
+                          <label for="state" class="form-label">State</label>
+                          <select id="state" class="form-control" required> 
+                            <option value=""> Select </option>
+                            <option value="newyork"> New York </option>
+                            <option value="newjersey"> New Jersey  </option>
+                            <option value="florida"> Florida </option>
+                            <option value="ohio"> Ohio </option>
+                            <option value="indiana"> Indiana </option>
+                            <option value="connecticut"> Connecticut </option>
+                            <option value="maine"> Maine </option>
+                            <option value="maryland"> Maryland  </option>
+                            <option value="virginia"> Virginia </option>
+                          </select>
+                          <div class="invalid-feedback">State Invalid!</div>
+                        </div>
+                        <div class="col-md-4">
+                          <label for="zip" class="form-label">Zip Code</label>
+                          <input id="zip" type="text" class="form-control" placeholder="12345" required>
+                          <div class="invalid-feedback">Zip Invalid!</div>
+                        </div>
+                      </div>
+      
+                      <hr class="my-4">
+      
+                  <div class="col-12">
+                    <div class="form-check"> 
+                      <input id="sameaddress" type="checkbox" class="form-check-input" onclick="displayShipping()"/>
+                      <label class="form-check-label" for="sameaddress">My billing and shipping address are same</label>
+                    </div>
+                  </div>
+                  <br>
+      
+                 
+                      
+      
+                      <hr class="my-5">
+                  
+                  <h3 class="mb-4">Payment Information</h3>
+                  <h5>Accepted Cards</h6>
+                  <div class="icon-container">
+                    <em class="fa fa-cc-visa" style="color:navy;font-size:80px;"></em>
+                    <em class="fa fa-cc-amex" style="color:blue;font-size:80px;"></em>
+                    <em class="fa fa-cc-mastercard" style="color:red;font-size:80px;"></em>
+                    <em class="fa fa-cc-discover" style="color:orange;font-size:80px;"></em>
+                    <em class="fa fa-cc-paypal" style="color:black;font-size:80px"></em>
+                  </div>
+                  <br>
+                  <div class="form-check">
+                    <input id ="card" name="payment" type="radio" class="form-check-input" required checked>
+                    <label for="card">Credit/Debit Card</label>
+                  </div>
+                  <div class="form-check">
+                    <input id ="paypal" name="payment" type="radio" class="form-check-input" required>
+                    <label for="paypal">Paypal</label>
+                  </div>
+                  <div class="form-check">
+                    <input id ="cashondelivery" name="payment" type="radio" class="form-check-input" required>
+                    <label for="cashondelivery">Cash on delivery</label>
+                  </div>
+                  <div class="form-check">
+                    <input id ="free" name="payment" type="radio" class="form-check-input" required>
+                    <label for="free">I want it free</label>
+                  </div>
+      
+                  <div class="row my-3 gy-3">
+                    <div class="col-md-6">
+                      <label for="paymentname" class="form-label">Full Name</label>
+                      <small class="text-muted">(as displayed on your card)</small>
+                      <input id="paymentname" type="text" class="form-control" placeholder="John Doe" required> 
+                      <div class="invalid-feedback"> Credit Card Name Invalid!</div>
+                      <div class="row my-3 gy-3">
+                      <div class="col-md-8">
+                        <label for="email" class="form-label">Email</label>
+                        <small class="text-muted">(Optional)</small>
+                        <input id="email" type="text" class="form-control" placeholder="johndoe@email.com"> 
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="paymentcard" class="form-label">Credit Card Number</label>
+                    <small class="text-muted">(16-digit)</small>
+                    <input id="paymentcard" type="text" class="form-control" placeholder="1111 3333 5555 7777" required>
+                    <div class="invalid-feedback">Credit Card Number Invalid!</div>
+      
+                    <div class="row my-3 gy-3">
+                      <div class="col-md-6">
+                        <label for="cvv" class="form-label">CVV</label>
+                        <input id="cvv" type="text" class="form-control" placeholder="123" required> 
+                        <div class="invalid-feedback"> CVV Invalid!</div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="expiration" class="form-label">Expiration</label>
+                        <input id="expiration" type="text" class="form-control" placeholder="(DD/YYYY)" required> 
+                        <div class="invalid-feedback"> Expiration Invalid!</div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Save Info</button>
+          </div>
+          <div class="col-4">
+            <div class="row-4">
+              <h4 class="d-flex justify-content-between align-item-center">
+                <physical class="text-muted" ">EVENTS REGISTERED</span>
+                <span class="badge bg-secondary squared-pill">6</span>
+              </h4>
+  
+              <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between">
+                  <div>
+                    <h5>TEAM BUILDINGEVENT</h5>
+                    <span class="text-muted">physical group activities to unquie indoor intiatives,nothing is offlimits</span>
+                  </div>
+                  <span class="text-muted">50,000</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <div>
+                    <h5>CHARITY EVENT</h5>
+                    <span class="text-muted">local and businees events</span>
+                  </div>
+                  <span class="text-muted">30,000</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <div>
+                    <h5>BIRTHDAY PARTY</h5>
+                    <span class="text-muted">bright decorations and sparkles which mesmerizes </span>
+                  </div>
+                  <span class="text-muted">10,000</span>
+                </li>
+                <!--<li class="list-group-item d-flex justify-content-between">
+                  <div>
+                    <h5>PERIPERI PIZZA</h5>
+                    <span class="text-muted">extra cheese</span>
+                  </div>
+                  <span class="text-muted">299</span>
+                </li>-->
+                <li class="list-group-item d-flex justify-content-between">
+                  <div>
+                    <h5 class="text-success">3000 discount on 1st registration</h5>
+                    <span class="text-success">little surprise </span>
+                  </div>
+                  <span class="text-success">offer</span>
+                </li>
+                <br>
+                <br>
+                <li class="list-group-item d-flex justify-content-between">
+                  <div>
+                    <h5>Tax Applicable</h5>
+                    <span class="text-muted">(Varies by State)</span>
+                  </div>
+                  <span class="text-muted">48.50</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <div>
+                    <h5>Total</h5>
+                    <span class="text-muted">With Tax</span>
+                  </div>
+                  <span class="text-success">87,000</span>
+                </li>
+              </ul>
+              <br>
+              <button type="submit" class="btn btn-warning btn-lg btn-block">Place Order</button>
+            </div>
+            </div>
+            
+        </div>
+        </div>
+      </div>
+    </form>
+    
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper.js and Bootstrap JS
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
+    -->
+    <script>
+      var form = document.querySelector('.needs-validation');
+
+      form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+      })
+  </script>
+  </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+  function displayShipping(){
+    if(document.getElementById("sameaddress").checked === true){
+      document.getElementById("shipping").style.display = "none";
+      document.getElementById("shippingheader").style.display = "none";
+    }
+
+    else{
+      document.getElementById("shipping").style.display = "block";
+      document.getElementById("shippingheader").style.display = "block";
+    }
+  }
+
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+
+</script>
